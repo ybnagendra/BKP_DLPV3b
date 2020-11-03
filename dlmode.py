@@ -15,7 +15,7 @@ k = keypad.KEYPAD()
 
 delay = 1
 usb_dir_path = '/mnt/sda1'
-pth1 = '/mnt/mmcblk0p1/BKP_DLPV3b/SrcDir'
+pth1 = '/mnt/mtdblock6/BKP_DLPV3b/SrcDir'
 
 def oledBkpDisp1():
     oledExp.clear()
@@ -236,7 +236,7 @@ class RUN_MODE:
 
                 if secs == 0:
                     fln = 'File_hr' + r.hours + '_mnts' + str(mnts - 1)
-                    pth = '/mnt/mmcblk0p1/BKP_DLPV3b'
+                    pth = '/mnt/mtdblock6/BKP_DLPV3b'
                     WRITE_DATA_IN_FILE(pth, fln, res_add)
                     bkp_data = bkp_data + res_add
                     print(res_add)
